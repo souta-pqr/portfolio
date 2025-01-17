@@ -1,5 +1,5 @@
 import React from 'react';
-import { TestTube } from 'lucide-react'; 
+import { TestTube } from 'lucide-react';
 
 const Research = () => {
   return (

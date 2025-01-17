@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code } from 'lucide-react'; 
+import { Code } from 'lucide-react';
 
 const Projects = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './components/Header.jsx';
-import Research from './components/Research.jsx';
-import Projects from './components/Projects.jsx';
-import Internship from './components/Internship.jsx';
+import Header from './components/Header';
+import Research from './components/Research';
+import Projects from './components/Projects';
+import Internship from './components/Internship';
 
 function App() {
   return (

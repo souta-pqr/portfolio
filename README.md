@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [こちら](https://souta-pqr.github.io/portfolio/) を押してください！
 
 =======

@@ -4,20 +4,21 @@
   "private": true,
   "homepage": "https://souta-pqr.github.io/portfolio",
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@headlessui/react": "^1.7.17",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.14",
+    "framer-motion": "^11.18.0",
+    "gh-pages": "^5.0.0",
     "lucide-react": "^0.263.1",
+    "postcss": "^8.4.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "gh-pages": "^5.0.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <main className="max-w-4xl mx-auto py-8 px-4">
+      <main className="max-w-4xl mx-auto py-12 px-4 mt-8">
         <div className="space-y-12">
           <Profile />
           <Research />

@@ -7,11 +7,11 @@ const ExperienceCard = ({ title, icon: Icon, children, defaultOpen = false }) =>
 
   return (
     <motion.div
-      className="bg-white rounded-xl shadow-lg overflow-hidden"
-      whileHover={{ translateY: -5 }}
+      className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+      whileHover={{ translateY: -2 }}
     >
       <motion.button
-        className="w-full p-6 text-left focus:outline-none"
+        className="w-full p-6 text-left focus:outline-none focus:bg-gray-50 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex items-center justify-between">
@@ -35,9 +35,9 @@ const ExperienceCard = ({ title, icon: Icon, children, defaultOpen = false }) =>
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="overflow-hidden"
+            className="overflow-hidden bg-white"
           >
-            <div className="p-6 pt-0 text-gray-600">
+            <div className="p-6 pt-0 text-gray-700">
               {children}
             </div>
           </motion.div>

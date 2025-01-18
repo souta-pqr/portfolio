@@ -12,36 +12,58 @@
   }
 
   body {
-    @apply text-gray-900;
+    /* より読みやすい文字色に変更 */
+    @apply text-gray-800;
     font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
     line-height: 1.75;
     letter-spacing: 0.025em;
+    /* 目の疲れを軽減する背景色 */
+    background-color: #fafbfc;
   }
 
-  /* Heading styles */
+  /* Heading styles with improved contrast */
   h1 {
-    @apply text-4xl font-bold tracking-tight;
+    @apply text-4xl font-bold tracking-tight text-gray-900;
     font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
   }
 
   h2 {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply text-2xl font-semibold tracking-tight text-gray-900;
     font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
   }
 
   h3 {
-    @apply text-xl font-medium;
+    @apply text-xl font-medium text-gray-800;
     font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
   }
 
-  /* Paragraph styles */
-  p {
-    @apply mb-4 leading-relaxed;
+  /* Card and container styles */
+  .content-card {
+    @apply bg-white shadow-sm border border-gray-100;
+    background-color: rgba(255, 255, 255, 0.95);
   }
 
-  /* Link styles */
+  /* Interactive elements */
+  .interactive-element {
+    @apply transition-colors duration-200;
+  }
+
+  .interactive-element:hover {
+    @apply bg-indigo-50;
+  }
+
+  .interactive-element.active {
+    @apply bg-indigo-100 text-indigo-800;
+  }
+
+  /* Link styles with better contrast */
   a {
-    @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
+    @apply text-indigo-700 hover:text-indigo-900 transition-colors duration-200;
+  }
+
+  /* Better contrast for secondary text */
+  .text-secondary {
+    @apply text-gray-700;
   }
 }
 

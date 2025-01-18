@@ -23,6 +23,24 @@ const Research = () => {
             <li>• 詳細な評価スクリプトの実装</li>
           </ul>
         </div>
+
+        <div>
+          <h3 className="text-lg font-medium text-gray-900">研究成果</h3>
+          <div className="space-y-2">
+            <div className="flex items-start gap-2">
+              <span className="mt-1">•</span>
+              <p className="flex-1">
+                日本音響学会第153回にて「補助情報を同時に認識する日本語音声認識における出力表現形式の比較」のタイトルで発表しました。
+                <button 
+                  onClick={() => window.open(`${process.env.PUBLIC_URL}/paper.pdf`, '_blank')}
+                  className="ml-2 inline-flex items-center px-3 py-1 text-sm text-blue-600 hover:text-blue-800 hover:underline"
+                >
+                  [発表論文PDF]
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </ExperienceCard>
   );

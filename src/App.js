@@ -7,27 +7,32 @@ import Internship from './components/Internship';
 import GadgetDecorations from './components/GadgetDecorations';
 import InteractiveBackground from './components/InteractiveBackground';
 import BouncingShapes from './components/BouncingShapes';
+import ThemeToggle from './components/ThemeToggle';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-transparent">
-      <InteractiveBackground />
-      <BouncingShapes />
-      <div className="relative z-10">
-        <Header />
-        <div className="relative max-w-4xl mx-auto">
-          <GadgetDecorations />
-          <main className="py-12 px-4 mt-8">
-            <div className="space-y-12">
-              <Profile />
-              <Research />
-              <Projects />
-              <Internship />
-            </div>
-          </main>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-dark-primary transition-colors duration-300">
+        <InteractiveBackground />
+        <BouncingShapes />
+        <div className="relative z-10">
+          <Header />
+          <div className="relative max-w-4xl mx-auto">
+            <GadgetDecorations />
+            <main className="py-12 px-4 mt-8">
+              <div className="space-y-12">
+                <Profile />
+                <Research />
+                <Projects />
+                <Internship />
+              </div>
+            </main>
+          </div>
         </div>
+        <ThemeToggle />
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 

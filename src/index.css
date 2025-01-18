@@ -4,6 +4,22 @@
 
 /* Base font settings */
 @layer base {
+  :root {
+    --background-primary: #fafbfc;
+    --background-secondary: #ffffff;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --accent-color: #4f46e5;
+  }
+
+  .dark {
+    --background-primary: #111827;
+    --background-secondary: #1f2937;
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --accent-color: #818cf8;
+  }
+
   html {
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -12,35 +28,24 @@
   }
 
   body {
-    /* より読みやすい文字色に変更 */
-    @apply text-gray-800;
+    @apply transition-colors duration-200;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
     font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
     line-height: 1.75;
     letter-spacing: 0.025em;
-    /* 目の疲れを軽減する背景色 */
-    background-color: #fafbfc;
   }
 
-  /* Heading styles with improved contrast */
-  h1 {
-    @apply text-4xl font-bold tracking-tight text-gray-900;
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
     font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
   }
 
-  h2 {
-    @apply text-2xl font-semibold tracking-tight text-gray-900;
-    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
-  }
-
-  h3 {
-    @apply text-xl font-medium text-gray-800;
-    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
-  }
-
-  /* Card and container styles */
+  /* Card styles */
   .content-card {
-    @apply bg-white shadow-sm border border-gray-100;
-    background-color: rgba(255, 255, 255, 0.95);
+    @apply transition-colors duration-200;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--background-secondary);
   }
 
   /* Interactive elements */
@@ -49,30 +54,40 @@
   }
 
   .interactive-element:hover {
-    @apply bg-indigo-50;
+    @apply bg-indigo-50 dark:bg-indigo-900;
   }
 
   .interactive-element.active {
-    @apply bg-indigo-100 text-indigo-800;
+    @apply bg-indigo-100 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200;
   }
 
-  /* Link styles with better contrast */
+  /* Link styles */
   a {
-    @apply text-indigo-700 hover:text-indigo-900 transition-colors duration-200;
-  }
-
-  /* Better contrast for secondary text */
-  .text-secondary {
-    @apply text-gray-700;
+    @apply text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-200;
   }
 }
 
-/* Custom class for code and technical content */
+/* Custom classes */
 .font-code {
   font-family: 'Source Code Pro', 'Consolas', monospace;
 }
 
-/* Custom class for numbers and dates */
 .font-numeric {
   font-feature-settings: "tnum" on, "lnum" on;
+}
+
+/* Card and section styles */
+.section-card {
+  @apply bg-white dark:bg-gray-800 shadow-sm dark:shadow-lg transition-all duration-200;
+}
+
+/* List and content styles */
+.content-list {
+  @apply space-y-2 text-gray-700 dark:text-gray-300;
+}
+
+/* Badge and tag styles */
+.skill-badge {
+  @apply px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 
+         rounded-full text-sm border border-gray-200 dark:border-gray-600;
 }

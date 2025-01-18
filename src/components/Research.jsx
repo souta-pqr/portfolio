@@ -3,6 +3,15 @@ import { TestTube } from 'lucide-react';
 import ExperienceCard from './ExperienceCard';
 
 const Research = () => {
+  const getPdfUrl = () => {
+    // GitHub Pagesの場合は/portfolio/を追加
+    if (window.location.hostname === 'souta-pqr.github.io') {
+      return '/portfolio/paper.pdf';
+    }
+    // ローカル開発環境の場合
+    return '/paper.pdf';
+  };
+
   return (
     <ExperienceCard title="研究活動" icon={TestTube}>
       <div className="space-y-4">
@@ -32,7 +41,7 @@ const Research = () => {
               <p className="flex-1">
                 日本音響学会第153回にて「補助情報を同時に認識する日本語音声認識における出力表現形式の比較」のタイトルで発表しました。
                 <button 
-                  onClick={() => window.open(`${process.env.PUBLIC_URL}/paper.pdf`, '_blank')}
+                  onClick={() => window.open(getPdfUrl(), '_blank')}
                   className="ml-2 inline-flex items-center px-3 py-1 text-sm text-blue-600 hover:text-blue-800 hover:underline"
                 >
                   [発表論文PDF]

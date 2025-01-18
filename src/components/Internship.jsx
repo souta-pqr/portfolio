@@ -20,16 +20,16 @@ const Internship = () => {
           </div>
           <p className="mt-4 mb-2 tracking-wide">グローバルチームでの開発経験</p>
           <ul className="list-none space-y-2">
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">日本・インドの開発者との協働</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">プロジェクト進行管理（WBS、ガントチャートの管理）</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">コードレビューとコミュニケーション調整</span>
             </li>
           </ul>
@@ -38,16 +38,16 @@ const Internship = () => {
         <div>
           <h3 className="text-xl font-medium text-gray-900 tracking-tight">主な成果と学び</h3>
           <ul className="list-none space-y-2 mt-2">
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">国際的な開発環境での協働経験</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">プロジェクト管理スキルの向上</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">予期せぬ状況への対応力の養成</span>
             </li>
           </ul>

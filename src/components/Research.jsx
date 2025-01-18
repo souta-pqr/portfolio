@@ -25,16 +25,16 @@ const Research = () => {
           <h3 className="text-xl font-medium text-gray-900 tracking-tight">研究内容</h3>
           <p className="mb-2 tracking-wide">音声認識の研究においてESPnetを活用し、以下の活動を行っています</p>
           <ul className="list-none space-y-2">
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">ESPnet内のコード（bash, Python）のカスタマイズ</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">データ処理用スクリプトの開発</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
+            <li className="flex items-center gap-2">
+              <span>•</span>
               <span className="tracking-wide">詳細な評価スクリプトの実装</span>
             </li>
           </ul>
@@ -42,20 +42,15 @@ const Research = () => {
 
         <div>
           <h3 className="text-xl font-medium text-gray-900 tracking-tight">研究成果</h3>
-          <div className="space-y-2">
-            <div className="flex items-start gap-2">
-              <span className="mt-1.5">•</span>
-              <p className="flex-1 tracking-wide">
-                日本音響学会第153回にて「補助情報を同時に認識する日本語音声認識における出力表現形式の比較」のタイトルで発表しました。
-                <button 
-                  onClick={() => window.open(getPdfUrl(), '_blank')}
-                  className="ml-2 inline-flex items-center px-3 py-1 text-sm text-blue-600 hover:text-blue-800 hover:underline"
-                >
-                  [発表論文PDF]
-                </button>
-              </p>
-            </div>
-          </div>
+          <p className="tracking-wide">
+            日本音響学会第153回にて「補助情報を同時に認識する日本語音声認識における出力表現形式の比較」のタイトルで発表しました。
+            <button 
+              onClick={() => window.open(getPdfUrl(), '_blank')}
+              className="ml-2 text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              [発表論文PDF]
+            </button>
+          </p>
         </div>
       </div>
     </ExperienceCard>

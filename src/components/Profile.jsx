@@ -3,31 +3,21 @@ import { User, Mail, Github, Code } from 'lucide-react';
 import ExperienceCard from './ExperienceCard';
 import { motion } from 'framer-motion';
 
-const SkillItem = ({ name }) => (
-  <div className="mb-4">
-    <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-      <span className="text-gray-800 font-medium">{name}</span>
-    </div>
-  </div>
-);
-
 const Profile = () => {
   return (
     <ExperienceCard title="プロフィール" icon={User} defaultOpen={true}>
       <div className="prose max-w-none text-gray-600 space-y-8">
-        {/* 自己紹介 */}
         <motion.div
           className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-xl"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
         >
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed tracking-wide">
             音声認識技術の研究とソフトウェア開発に励む学生です。
             ESPnetを用いた研究開発と、ソフトウェアプロジェクトに取り組んでいます。
           </p>
         </motion.div>
 
-        {/* 連絡先情報 */}
         <div className="flex flex-wrap gap-4">
           <motion.a
             href="mailto:boriko0116@gmail.com"
@@ -57,10 +47,10 @@ const Profile = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <h4 className="font-semibold text-gray-900 mb-3">プログラミング言語</h4>
+            <h4 className="font-semibold text-gray-900 mb-3 tracking-tight">プログラミング言語</h4>
             <div className="flex flex-wrap gap-2">
               {['Python', 'C/C++', 'JavaScript / TypeScript', 'Bash'].map((lang) => (
-                <span key={lang} className="px-3 py-1 bg-white rounded-full text-sm text-gray-600 border border-gray-200">
+                <span key={lang} className="px-3 py-1 bg-white rounded-full text-sm text-gray-600 border border-gray-200 font-code">
                   {lang}
                 </span>
               ))}
@@ -72,7 +62,7 @@ const Profile = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <h4 className="font-semibold text-gray-900 mb-3">開発ツール</h4>
+            <h4 className="font-semibold text-gray-900 mb-3 tracking-tight">開発ツール</h4>
             <div className="flex flex-wrap gap-2">
               {['Docker', 'Linux', 'VSCode', 'Git', 'React', 'ESPnet'].map((tool) => (
                 <span key={tool} className="px-3 py-1 bg-white rounded-full text-sm text-gray-600 border border-gray-200">
@@ -87,7 +77,7 @@ const Profile = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <h4 className="font-semibold text-gray-900 mb-3">関心分野</h4>
+            <h4 className="font-semibold text-gray-900 mb-3 tracking-tight">関心分野</h4>
             <div className="flex flex-wrap gap-2">
               {['音声認識', '機械学習', 'アプリ開発', 'クラウドコンピューティング'].map((interest) => (
                 <span key={interest} className="px-3 py-1 bg-white rounded-full text-sm text-gray-600 border border-gray-200">

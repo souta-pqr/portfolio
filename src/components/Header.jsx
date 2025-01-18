@@ -10,8 +10,8 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl font-bold text-gray-900">小堀 聡太</h1>
-          <p className="mt-2 text-gray-600">
+          <h1 className="text-4xl font-bold text-gray-900 tracking-tight">小堀 聡太</h1>
+          <p className="mt-2 text-gray-600 leading-relaxed">
             千葉工業大学先進工学部未来ロボティクス学科 藤江研究室
           </p>
         </motion.div>

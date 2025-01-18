@@ -2,11 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Base font settings */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply text-gray-900;
+    font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    line-height: 1.75;
+    letter-spacing: 0.025em;
+  }
+
+  /* Heading styles */
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  }
+
+  /* Paragraph styles */
+  p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  /* Link styles */
+  a {
+    @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
+  }
+}
+
+/* Custom class for code and technical content */
+.font-code {
+  font-family: 'Source Code Pro', 'Consolas', monospace;
+}
+
+/* Custom class for numbers and dates */
+.font-numeric {
+  font-feature-settings: "tnum" on, "lnum" on;
 }

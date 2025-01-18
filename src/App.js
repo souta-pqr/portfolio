@@ -13,9 +13,11 @@ import { ThemeProvider } from './contexts/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-dark-primary transition-colors duration-300">
-        <InteractiveBackground />
-        <BouncingShapes />
+      <div className="relative min-h-screen bg-white dark:bg-dark-primary transition-colors duration-300">
+        <div className="z-0">
+          <InteractiveBackground />
+          <BouncingShapes />
+        </div>
         <div className="relative z-10">
           <Header />
           <div className="relative max-w-4xl mx-auto">

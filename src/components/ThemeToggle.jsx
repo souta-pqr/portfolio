@@ -9,7 +9,8 @@ const ThemeToggle = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="fixed bottom-4 right-4 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow"
+      className="fixed bottom-4 right-4 p-3 rounded-full bg-white dark:bg-gray-800 
+                 shadow-lg hover:shadow-xl transition-shadow z-50" // z-indexを50に設定
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       aria-label={isDarkMode ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}

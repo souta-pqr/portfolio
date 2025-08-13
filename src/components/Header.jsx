@@ -123,13 +123,6 @@ const Header = () => {
           >
             {/* 写真コンテナ */}
             <div className="relative w-32 h-32 md:w-40 md:h-40">
-              {/* 外側のホログラムリング */}
-              <div className="absolute inset-0 rounded-full border-2 border-cyber-primary opacity-60 animate-cyber-pulse"></div>
-              <div className="absolute inset-0 rounded-full border border-cyber-cyan opacity-40 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-              
-              {/* グローエフェクト */}
-              <div className="absolute inset-0 rounded-full bg-cyber-primary opacity-10 blur-md animate-pulse"></div>
-              
               {/* 写真本体 */}
               <motion.div 
                 className="relative w-full h-full rounded-full overflow-hidden border-2 border-cyber-primary shadow-cyber-lg"
@@ -147,30 +140,7 @@ const Header = () => {
                     filter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
                   }}
                 />
-                
-                {/* ホログラム効果オーバーレイ */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyber-cyan/10 via-transparent to-cyber-primary/10 pointer-events-none"></div>
-                
-                {/* スキャンライン効果 */}
-                <div 
-                  className="absolute inset-0 opacity-20 pointer-events-none"
-                  style={{
-                    background: 'linear-gradient(90deg, transparent 0%, rgba(0, 255, 65, 0.3) 50%, transparent 100%)',
-                    animation: 'scan-photo 4s linear infinite'
-                  }}
-                ></div>
               </motion.div>
-              
-              {/* コーナー装飾 */}
-              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-cyber-cyan opacity-60"></div>
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-cyber-cyan opacity-60"></div>
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-cyber-cyan opacity-60"></div>
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-cyber-cyan opacity-60"></div>
-              
-              {/* ID タグ */}
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-dark-secondary bg-opacity-90 border border-cyber-primary border-opacity-30 rounded px-3 py-1">
-                <span className="text-xs font-mono-cyber text-cyber-primary text-glow">ID: S.KOBORI</span>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -193,14 +163,6 @@ const Header = () => {
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyber-cyan via-transparent to-cyber-cyan opacity-30 animate-pulse"></div>
         <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-cyber-pink via-transparent to-cyber-pink opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
-      
-      {/* カスタムアニメーション */}
-      <style jsx>{`
-        @keyframes scan-photo {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-      `}</style>
     </header>
   );
 };

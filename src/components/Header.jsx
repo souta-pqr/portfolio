@@ -36,89 +36,152 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-dark-secondary dark:bg-black bg-opacity-90 backdrop-blur-md border-b border-cyber-primary border-opacity-30 shadow-cyber transition-all duration-300">
+    <header className="bg-dark-secondary bg-opacity-90 backdrop-blur-md border-b border-cyber-primary border-opacity-30 shadow-cyber transition-all duration-300 relative overflow-hidden">
       <div className="max-w-4xl mx-auto py-8 px-4 relative">
         {/* 背景装飾 */}
         <div className="absolute inset-0 bg-neon-grid opacity-5 animate-pulse"></div>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative z-10"
-        >
-          {/* メイン名前 */}
-          <motion.h1 
-            className={`text-4xl md:text-5xl font-cyber font-black tracking-cyber text-cyber-primary transition-all duration-300 ${
-              isGlitching ? 'animate-glitch text-cyber-pink' : 'text-glow'
-            }`}
-            style={{
-              textShadow: isGlitching 
-                ? '0 0 20px #ff0088, 0 0 40px #ff0088' 
-                : '0 0 20px #00ff41, 0 0 40px #00ff41',
-            }}
-          >
-            {displayText}
-          </motion.h1>
-          
-          {/* サブタイトル */}
+        <div className="flex items-start justify-between relative z-10">
+          {/* 左側：メイン情報 */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-4"
-          >
-            <p className="text-lg md:text-xl text-cyber-secondary font-mono-cyber tracking-wide leading-relaxed">
-              <span className="text-cyber-cyan text-glow">千葉工業大学大学院</span>
-              <span className="mx-2 text-cyber-muted">|</span>
-              <span className="text-cyber-primary">先進工学部研究科</span>
-              <span className="mx-2 text-cyber-muted">|</span>
-              <span className="text-cyber-cyan">未来ロボティクス専攻</span>
-            </p>
-            <p className="text-base md:text-lg text-cyber-muted font-mono-cyber mt-2 tracking-wide">
-              <span className="text-cyber-orange text-glow">藤江研究室</span>
-              <span className="mx-2">•</span>
-              <span className="text-cyber-secondary">音声認識研究</span>
-            </p>
-          </motion.div>
-          
-          {/* ステータスインジケーター */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex items-center mt-6 space-x-6"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex-1"
           >
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-cyber-primary rounded-full animate-cyber-pulse"></div>
-              <span className="text-sm font-mono-cyber text-cyber-secondary tracking-wide">
-                STATUS: ACTIVE
-              </span>
-            </div>
+            {/* メイン名前 */}
+            <motion.h1 
+              className={`text-4xl md:text-5xl font-cyber font-black tracking-cyber text-cyber-primary transition-all duration-300 ${
+                isGlitching ? 'animate-glitch text-cyber-pink' : 'text-glow'
+              }`}
+              style={{
+                textShadow: isGlitching 
+                  ? '0 0 20px #ff0088, 0 0 40px #ff0088' 
+                  : '0 0 20px #00ff41, 0 0 40px #00ff41',
+              }}
+            >
+              {displayText}
+            </motion.h1>
             
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-cyber-cyan rounded-full animate-pulse"></div>
-              <span className="text-sm font-mono-cyber text-cyber-secondary tracking-wide">
-                RESEARCH: ONGOING
-              </span>
-            </div>
+            {/* サブタイトル */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-4"
+            >
+              <p className="text-lg md:text-xl text-cyber-secondary font-mono-cyber tracking-wide leading-relaxed">
+                <span className="text-cyber-cyan text-glow">千葉工業大学</span>
+                <span className="mx-2 text-cyber-muted">|</span>
+                <span className="text-cyber-primary">先進工学研究科</span>
+                <span className="mx-2 text-cyber-muted">|</span>
+                <span className="text-cyber-cyan">未来ロボティクス専攻</span>
+              </p>
+              <p className="text-base md:text-lg text-cyber-muted font-mono-cyber mt-2 tracking-wide">
+                <span className="text-cyber-orange text-glow">藤江研究室</span>
+                <span className="mx-2">•</span>
+                <span className="text-cyber-secondary">音声認識研究</span>
+              </p>
+            </motion.div>
             
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-cyber-orange rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-              <span className="text-sm font-mono-cyber text-cyber-secondary tracking-wide">
-                BUILD: v2025.8
-              </span>
+            {/* ステータスインジケーター */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex items-center mt-6 space-x-6"
+            >
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-cyber-primary rounded-full animate-cyber-pulse"></div>
+                <span className="text-sm font-mono-cyber text-cyber-secondary tracking-wide">
+                  STATUS: ACTIVE
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-cyber-cyan rounded-full animate-pulse"></div>
+                <span className="text-sm font-mono-cyber text-cyber-secondary tracking-wide">
+                  RESEARCH: ONGOING
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-cyber-orange rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                <span className="text-sm font-mono-cyber text-cyber-secondary tracking-wide">
+                  BUILD: v2025.8
+                </span>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* 右側：プロフィール写真 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="ml-8 relative"
+          >
+            {/* 写真コンテナ */}
+            <div className="relative w-32 h-32 md:w-40 md:h-40">
+              {/* 外側のホログラムリング */}
+              <div className="absolute inset-0 rounded-full border-2 border-cyber-primary opacity-60 animate-cyber-pulse"></div>
+              <div className="absolute inset-0 rounded-full border border-cyber-cyan opacity-40 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+              
+              {/* グローエフェクト */}
+              <div className="absolute inset-0 rounded-full bg-cyber-primary opacity-10 blur-md animate-pulse"></div>
+              
+              {/* 写真本体 */}
+              <motion.div 
+                className="relative w-full h-full rounded-full overflow-hidden border-2 border-cyber-primary shadow-cyber-lg"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: '0 0 40px rgba(0, 255, 65, 0.6)'
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src="/portfolio/profile-photo.jpg" // GitHub Pages用のパス
+                  alt="小堀 聡太 - プロフィール写真"
+                  className="w-full h-full object-cover"
+                  style={{
+                    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
+                  }}
+                />
+                
+                {/* ホログラム効果オーバーレイ */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyber-cyan/10 via-transparent to-cyber-primary/10 pointer-events-none"></div>
+                
+                {/* スキャンライン効果 */}
+                <div 
+                  className="absolute inset-0 opacity-20 pointer-events-none"
+                  style={{
+                    background: 'linear-gradient(90deg, transparent 0%, rgba(0, 255, 65, 0.3) 50%, transparent 100%)',
+                    animation: 'scan-photo 4s linear infinite'
+                  }}
+                ></div>
+              </motion.div>
+              
+              {/* コーナー装飾 */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-cyber-cyan opacity-60"></div>
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-cyber-cyan opacity-60"></div>
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-cyber-cyan opacity-60"></div>
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-cyber-cyan opacity-60"></div>
+              
+              {/* ID タグ */}
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-dark-secondary bg-opacity-90 border border-cyber-primary border-opacity-30 rounded px-3 py-1">
+                <span className="text-xs font-mono-cyber text-cyber-primary text-glow">ID: S.KOBORI</span>
+              </div>
             </div>
           </motion.div>
-          
-          {/* 装飾ライン */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 0.8 }}
-            className="mt-8 h-px bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-60"
-          ></motion.div>
-        </motion.div>
+        </div>
+        
+        {/* 装飾ライン */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.2, delay: 0.8 }}
+          className="mt-8 h-px bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-60"
+        ></motion.div>
         
         {/* コーナー装飾 */}
         <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-cyber-primary opacity-60"></div>
@@ -130,6 +193,14 @@ const Header = () => {
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyber-cyan via-transparent to-cyber-cyan opacity-30 animate-pulse"></div>
         <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-cyber-pink via-transparent to-cyber-pink opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
+      
+      {/* カスタムアニメーション */}
+      <style jsx>{`
+        @keyframes scan-photo {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+      `}</style>
     </header>
   );
 };

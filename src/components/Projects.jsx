@@ -5,60 +5,30 @@ import ExperienceCard from './ExperienceCard';
 const Projects = () => {
   return (
     <ExperienceCard title="プロジェクト" icon={Code}>
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div>
-          <h3 className="text-xl font-medium text-gray-900 dark:text-white tracking-tight">
-            対話ライブコンペティション
+          <h3 className="text-xl font-cyber font-bold text-cyber-primary text-glow tracking-tight mb-4">
+            対話ライブコンペティション7
           </h3>
-          <p className="mt-2 mb-2 tracking-wide text-gray-800 dark:text-gray-100">
-            研究室チームでの参加において、以下の役割を担当：
-          </p>
-          <ul className="list-none space-y-2">
-            <li className="flex items-center gap-2">
-              <span className="text-gray-800 dark:text-gray-100">•</span>
-              <span className="tracking-wide text-gray-800 dark:text-gray-100">
-                システム発話権の管理システムの変更
+          <div className="space-y-3">
+            <div className="flex items-center justify-between p-4 bg-cyber-gradient rounded-lg border border-cyber-primary border-opacity-30">
+              <span className="font-mono-cyber text-cyber-secondary text-lg tracking-wide">
+                タスクトラック
               </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-gray-800 dark:text-gray-100">•</span>
-              <span className="tracking-wide text-gray-800 dark:text-gray-100">
-                対話履歴管理システムの変更
+              <span className="font-cyber font-bold text-2xl text-cyber-cyan text-glow">
+                4位
               </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-gray-800 dark:text-gray-100">•</span>
-              <span className="tracking-wide text-gray-800 dark:text-gray-100">
-                システムの状態管理機能の変更
+            </div>
+            
+            <div className="flex items-center justify-between p-4 bg-cyber-gradient rounded-lg border border-cyber-cyan border-opacity-30">
+              <span className="font-mono-cyber text-cyber-secondary text-lg tracking-wide">
+                シチュエーショントラック
               </span>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-xl font-medium text-gray-900 dark:text-white tracking-tight">
-            チーム開発における学び
-          </h3>
-          <ul className="list-none space-y-2">
-            <li className="flex items-center gap-2">
-              <span className="text-gray-800 dark:text-gray-100">•</span>
-              <span className="tracking-wide text-gray-800 dark:text-gray-100">
-                明確なコミュニケーションの重要性
+              <span className="font-cyber font-bold text-2xl text-cyber-pink text-glow">
+                3位
               </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-gray-800 dark:text-gray-100">•</span>
-              <span className="tracking-wide text-gray-800 dark:text-gray-100">
-                モジュール間の連携における綿密な設計の必要性
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-gray-800 dark:text-gray-100">•</span>
-              <span className="tracking-wide text-gray-800 dark:text-gray-100">
-                ユーザーテストの重要性と本番環境を想定した開発の必要性
-              </span>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </ExperienceCard>

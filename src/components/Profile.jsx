@@ -52,7 +52,7 @@ const Profile = () => {
               プログラミング言語
             </h4>
             <div className="flex flex-wrap gap-2">
-              {['Python', 'C/C++', 'JavaScript / TypeScript', 'Bash'].map((lang) => (
+              {['Python', 'C/C++', 'JS/TS', 'Bash'].map((lang) => (
                 <span 
                   key={lang} 
                   className="px-3 py-1 bg-dark-accent border border-cyber-cyan border-opacity-30 rounded-full text-sm text-cyber-secondary 
@@ -73,7 +73,7 @@ const Profile = () => {
               開発ツール
             </h4>
             <div className="flex flex-wrap gap-2">
-              {['Docker', 'Linux', 'VSCode', 'Git', 'React', 'ESPnet'].map((tool) => (
+              {['Docker', 'Linux', 'VSCode', 'GitHub', 'React', 'ESPnet'].map((tool) => (
                 <span 
                   key={tool} 
                   className="px-3 py-1 bg-dark-accent border border-cyber-pink border-opacity-30 rounded-full text-sm text-cyber-secondary 
@@ -94,7 +94,7 @@ const Profile = () => {
               関心分野
             </h4>
             <div className="flex flex-wrap gap-2">
-              {['音声認識', '機械学習', 'アプリ開発', 'クラウドコンピューティング'].map((interest) => (
+              {['音声認識', '機械学習', 'アプリ開発', '組み込みシステム'].map((interest) => (
                 <span 
                   key={interest} 
                   className="px-3 py-1 bg-dark-accent border border-cyber-orange border-opacity-30 rounded-full text-sm text-cyber-secondary 

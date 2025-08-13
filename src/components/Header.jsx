@@ -71,7 +71,7 @@ const Header = () => {
               className="mt-4"
             >
               <p className="text-lg md:text-xl text-cyber-secondary font-mono-cyber tracking-wide leading-relaxed">
-                <span className="text-cyber-cyan text-glow">千葉工業大学</span>
+                <span className="text-cyber-cyan text-glow">千葉工業大学大学院</span>
                 <span className="mx-2 text-cyber-muted">|</span>
                 <span className="text-cyber-primary">先進工学研究科</span>
                 <span className="mx-2 text-cyber-muted">|</span>

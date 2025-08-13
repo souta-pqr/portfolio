@@ -10,8 +10,8 @@ const Research = () => {
       color: 'cyber-primary'
     },
     {
-      title: '日本音響学会第153回研究発表会',
-      paper: '日本語音声認識における補助情報の認識方式の比較',
+      title: '日本音響学会第154回研究発表会',
+      paper: '「日本語音声認識における補助情報の認識方式の比較」',
       color: 'cyber-cyan'
     }
   ];
